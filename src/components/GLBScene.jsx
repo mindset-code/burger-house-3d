@@ -68,7 +68,9 @@ export default function GLBScene({
       <Canvas shadows={shadows}
         camera={{ position:[0, targetSize * 0.25, cameraZ], fov }}
         className="!w-full !h-full"
-        gl={{ antialias:true, toneMapping:THREE.ACESFilmicToneMapping, toneMappingExposure:exposure }}>
+        dpr={[1, 1.5]}
+        performance={{ min: 0.5 }}
+        gl={{ antialias:true, powerPreference:'high-performance', toneMapping:THREE.ACESFilmicToneMapping, toneMappingExposure:exposure }}>
 
         <ambientLight intensity={ambientIntensity} />
         <directionalLight position={[4,8,5]} intensity={3} castShadow={shadows}
