@@ -90,7 +90,7 @@ export default function App() {
           <HeroScene />
 
           {/* Texto — encima del canvas */}
-          <div ref={textRef} className="relative z-10 px-8 md:px-16 max-w-xl">
+          <div ref={textRef} className="relative z-10 px-8 md:px-16 max-w-2xl">
             <p className="hero-tag text-amber-400 text-sm font-mono mb-5 tracking-[.3em] uppercase">
               Artesanal · Desde 1987
             </p>

@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import GLBScene from './GLBScene'
+import Icon from './icons'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -89,7 +90,7 @@ export default function Projects() {
             <div key={i} className="flex gap-4 items-center border border-amber-900/20
                          rounded-2xl p-4 bg-[#0f0400] hover:border-amber-500/30
                          hover:-translate-y-1 transition-all duration-300 cursor-pointer">
-              <div className="w-14 h-14 rounded-xl bg-amber-900/20 flex items-center justify-center flex-shrink-0 text-2xl">🍔</div>
+              <div className="w-14 h-14 rounded-xl bg-amber-900/20 flex items-center justify-center flex-shrink-0 text-2xl text-amber-500"><Icon name="burger" /></div>
               <div className="flex-1 min-w-0">
                 <div className="flex justify-between mb-0.5">
                   <h4 className="font-bold text-amber-100 text-sm">{item.title}</h4>

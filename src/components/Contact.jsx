@@ -1,3 +1,4 @@
+import Icon from './icons'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 
@@ -39,7 +40,7 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-amber-100">¿Hambre?</h2>
           <p className="text-amber-200/60 text-lg mb-2">Ven a disfrutar de la mejor hamburguesa de Madrid.</p>
           <p className="text-amber-200/50 mb-8 flex items-center gap-2">
-            <span className="text-amber-500">📍</span> Calle del Fuego 42, Madrid
+            <span className="text-amber-500"><Icon name="pin" /></span> Calle del Fuego 42, Madrid
           </p>
           <div className="space-y-3 mb-10">
             {[['Reservas','+34 600 000 000'],['Email','hola@burgerhouse.es'],['Delivery','Uber Eats · Glovo · Just Eat']].map(([l,v]) => (

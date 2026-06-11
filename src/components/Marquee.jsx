@@ -1,5 +1,9 @@
 // Marquee de fuego — banda entre secciones
-const items = ['FRESH', '🔥', 'ARTISAN', '⭐', 'HAND-MADE', '🍔', 'FIRE-GRILLED', '✦', 'SINCE 1987', '🔥', 'NO FROZEN', '✦']
+// Iconos como tokens (icon:*) → SVG inline; los emojis se ven como
+// cuadrados en sistemas sin fuente de emoji a color
+import Icon from './icons'
+
+const items = ['FRESH', 'icon:flame', 'ARTISAN', '★', 'HAND-MADE', 'icon:burger', 'FIRE-GRILLED', '✦', 'SINCE 1987', 'icon:flame', 'NO FROZEN', '✦']
 
 export default function Marquee({ reverse = false }) {
   const content = [...items, ...items]
@@ -15,7 +19,7 @@ export default function Marquee({ reverse = false }) {
           <span key={i}
             className="text-amber-500/80 text-sm font-mono tracking-[0.3em] uppercase
                        hover:text-amber-300 transition-colors">
-            {item}
+            {item.startsWith('icon:') ? <Icon name={item.slice(5)} /> : item}
           </span>
         ))}
       </div>

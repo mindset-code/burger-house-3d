@@ -1,4 +1,4 @@
-import { useRef, useMemo, Suspense } from 'react'
+import { useRef, useMemo, useState, useEffect, Suspense } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useGLTF, Environment, ContactShadows, Float } from '@react-three/drei'
 import * as THREE from 'three'
@@ -63,9 +63,25 @@ export default function GLBScene({
   exposure = 1.5,
   ambientIntensity = 0.7,
 }) {
+  // Pausar el render loop cuando el canvas no está en viewport:
+  // con 4 escenas en la página, animarlas todas a la vez castiga GPU/batería
+  // y en hardware débil puede dejar modelos sin pintar.
+  const wrapRef = useRef()
+  const [visible, setVisible] = useState(true)
+  useEffect(() => {
+    const el = wrapRef.current
+    if (!el || !('IntersectionObserver' in window)) return
+    const io = new IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { rootMargin: '160px' },
+    )
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
+
   return (
-    <div className={`relative ${className}`}>
-      <Canvas shadows={shadows}
+    <div ref={wrapRef} className={`relative ${className}`}>
+      <Canvas shadows={shadows} frameloop={visible ? 'always' : 'never'}
         camera={{ position:[0, targetSize * 0.25, cameraZ], fov }}
         className="!w-full !h-full"
         dpr={[1, 1.5]}
