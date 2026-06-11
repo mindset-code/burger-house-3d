@@ -59,12 +59,16 @@ function DepthMesh({ url, w, h, dispScale, sparkles, sparkleColor }) {
     return () => window.removeEventListener('mousemove', onMove)
   }, [size])
 
+  /* eslint-disable react-hooks/immutability --
+     useFrame de R3F corre por frame fuera del render de React; mutar la
+     cámara/mesh aquí es el patrón canónico de react-three-fiber. */
   useFrame(() => {
     camera.position.x += (target.current.x - camera.position.x) * 0.04
     camera.position.y += (target.current.y - camera.position.y) * 0.04
     camera.lookAt(0, 0, 0)
     if (meshRef.current) meshRef.current.rotation.z = Math.sin(Date.now()*.0004)*.006
   })
+  /* eslint-enable react-hooks/immutability */
 
   return (
     <Float speed={1.2} floatIntensity={0.15} rotationIntensity={0}>
