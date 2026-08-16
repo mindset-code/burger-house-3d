@@ -126,7 +126,7 @@ firebase deploy --only hosting
 ## Links
 
 - **Live demo:** [burger-house-3d.web.app](https://burger-house-3d.web.app)
-- **LinkedIn:** [Mindset & Code](https://www.linkedin.com/company/mindset-code)
+- **Web:** [mindset-code.com](https://mindset-code.com/es)
 - **Email:** contacto@mindset-code.com
 
 ---
@@ -227,4 +227,4 @@ firebase deploy --only hosting
 
 ---
 
-*Built by [Mindset & Code](https://github.com/mindset-code) · Data & BI Analyst · MBA · ISC2 CC*
+*Mindset & Code · asesoría fiscal y tecnológica · [mindset-code.com](https://mindset-code.com/es)*

@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-# Privacidad (Mindset & Code)
+# Privacidad
 CLAUDE.md
 CLAUDE.local.md
 .claude/
