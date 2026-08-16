@@ -31,3 +31,4 @@ agents/
 skills/
 .env
 .env.*
+.firebase/

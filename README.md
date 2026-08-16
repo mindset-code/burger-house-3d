@@ -3,7 +3,7 @@
 > **Immersive 3D web** · React + Vite + Three.js (R3F) + GSAP · Real 3D models with real-time interaction
 > **Status:** Deployed to production · 2026-06
 
-[![Live Demo](https://img.shields.io/badge/Live-portfolio--3d--operador.web.app-f59e0b?style=for-the-badge&logo=firebase&logoColor=white)](https://burger-house-3d.web.app)
+[![Live Demo](https://img.shields.io/badge/Live-burger--house--3d.web.app-f59e0b?style=for-the-badge&logo=firebase&logoColor=white)](https://burger-house-3d.web.app)
 [![Stack](https://img.shields.io/badge/Stack-React%20%2B%20Three.js-61dafb?style=for-the-badge&logo=react&logoColor=black)](.)
 [![Animation](https://img.shields.io/badge/Animation-GSAP%20ScrollTrigger-88ce02?style=for-the-badge&logo=greensock&logoColor=white)](.)
 

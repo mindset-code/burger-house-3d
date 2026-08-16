@@ -52,7 +52,7 @@ Los textos están en los componentes (`HeroScene.jsx`, `About.jsx`, `Projects.js
 
 ```bash
 npm run build        # genera dist/
-firebase deploy --only hosting --project burger-house-3d
+firebase deploy --only hosting   # el proyecto se elige una vez con `firebase use --add`
 ```
 
 `firebase.json` está configurado con `"public": "dist"` y SPA rewrite a `/index.html`.
