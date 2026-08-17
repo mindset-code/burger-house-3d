@@ -227,4 +227,6 @@ firebase deploy --only hosting
 
 ---
 
+**Ficha del proyecto:** [Restaurante en 3D en mindset-code.com](https://mindset-code.com/es/codigo/restaurante-3d) — qué problema resuelve, para quién y con qué está construido.
+
 *Mindset & Code · asesoría fiscal y tecnológica · [mindset-code.com](https://mindset-code.com/es)*
