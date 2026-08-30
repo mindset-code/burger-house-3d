@@ -1,0 +1,38 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# Solo Node 22: camera-controls, que entra como dependencia de
+# @react-three/drei, declara engines.node >= 22.0.0. En Node 20 la instalacion
+# avisa (EBADENGINE) y la compilacion todavia sale, pero seria un verde que no
+# significa nada.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Instalar exactamente lo que fija el lockfile
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Compilar
+        run: npm run build
+
+      - name: Comprobar que la compilacion ha producido algo
+        run: |
+          test -d dist || { echo "no hay carpeta dist"; exit 1; }
+          test -f dist/index.html || { echo "dist sin index.html"; exit 1; }
+          echo "dist: $(find dist -type f | wc -l) ficheros"
