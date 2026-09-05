@@ -126,7 +126,7 @@ firebase deploy --only hosting
 ## Links
 
 - **Live demo:** [burger-house-3d.web.app](https://burger-house-3d.web.app)
-- **Web:** [mindset-code.com](https://mindset-code.com/es)
+- **Web:** [mindset-code.com](https://mindset-code.com)
 - **Email:** contacto@mindset-code.com
 
 ---
@@ -227,6 +227,6 @@ firebase deploy --only hosting
 
 ---
 
-**Ficha del proyecto:** [Restaurante en 3D en mindset-code.com](https://mindset-code.com/es/codigo/restaurante-3d) — qué problema resuelve, para quién y con qué está construido.
+**Ficha del proyecto:** [Restaurante en 3D en mindset-code.com](https://mindset-code.com/codigo/restaurante-3d) — qué problema resuelve, para quién y con qué está construido.
 
-*Mindset & Code · asesoría fiscal y tecnológica · [mindset-code.com](https://mindset-code.com/es)*
+*Mindset & Code · asesoría fiscal y tecnológica · [mindset-code.com](https://mindset-code.com)*
